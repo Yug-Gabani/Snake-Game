@@ -11,9 +11,7 @@ This is a simple implementation of the classic Snake game using C++ and console 
 <br>👉Snake and food displayed using emojis (🧱, 🐲, 🐍, 🍎).
 
 <h1>🔴 Requirements</h1>
-
-To run the game, you'll need:
-
+To run the game, you'll need
 <br>👉A C++ compiler (e.g., GCC or MSVC).
 <br>👉Windows operating system for the console-based UI (uses Windows-specific libraries like windows.h).
 <br>👉An IDE or text editor like Visual Studio or Code::Blocks.
