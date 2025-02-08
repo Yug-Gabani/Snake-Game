@@ -38,15 +38,3 @@ To run the game, you'll need
 <br>👉Food (🍎) randomly appears on the grid, and the snake needs to "eat" it to grow.
 <br>👉As the snake eats more food, its body length increases.
 <br>👉The game ends when the snake collides with a wall or itself.
-
-<h1>🔴Code Overview</h1>
-<h2>⭕️Key Classes:</h2>
-      <p>🟡SnakeGame: The base class responsible for managing the grid, food, score, and the snake.</p>
-<br>🔺Functions:
-generateFood(): Generates new food at a random position.
-draw(): Draws the game grid, snake, and food.
-snackrun: A derived class that handles game input, logic, and game loop.
-Functions:
-input(): Handles player input for controlling the snake.
-logic(): Handles snake movement, collision detection, and growth.
-run(): Starts and runs the game loop.
