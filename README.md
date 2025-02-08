@@ -5,7 +5,7 @@ This is a simple implementation of the classic Snake game using C++ and console 
 <h1>🔴 Features :</h1>
 <br>👉Classic Snake gameplay.
 <br>👉Dynamic food generation.
-👉Score tracking.
-👉Game Over screen with final score.
-👉Customizable grid size.
-👉Snake and food displayed using emojis (🧱, 🐲, 🐍, 🍎).
+<br>👉Score tracking.
+<br>👉Game Over screen with final score.
+<br>👉Customizable grid size.
+<br>👉Snake and food displayed using emojis (🧱, 🐲, 🐍, 🍎).
