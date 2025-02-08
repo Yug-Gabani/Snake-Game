@@ -1,4 +1,4 @@
-<h1>🔴 Snake Game :</h1>
+<h2>🔴 Snake Game :</h2>
 
 This is a simple implementation of the classic Snake game using C++ and console graphics. The snake moves around the screen, eating food to grow longer, and the player must avoid crashing into the walls or the snake's own body.
 
@@ -9,3 +9,4 @@ This is a simple implementation of the classic Snake game using C++ and console 
 <br>👉Game Over screen with final score.
 <br>👉Customizable grid size.
 <br>👉Snake and food displayed using emojis (🧱, 🐲, 🐍, 🍎).
+
