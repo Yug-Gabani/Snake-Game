@@ -7,14 +7,14 @@
 
 ## Table of Contents
 - [Features](#features)
-- [Installation](#installation)
-- [Features](#features)
-- [Data Structures Used](#data-structures-used)
-- [How the Game Works](#how-the-game-works)
-- [How to Play](#how-to-play)
-- [Compilation and Execution](#compilation-and-execution)
-- [Future Improvements](#future-improvements)
-- [Creators](#creators)
+- [installation](#installation)
+- [features](#features)
+- [data Structures Used](#data-structures-used)
+- [how the Game Works](#how-the-game-works)
+- [how to Play](#how-to-play)
+- [compilation and Execution](#compilation-and-execution)
+- [future Improvements](#future-improvements)
+- [creators](#creators)
 
 
 <h2>🔴Features</h2>
