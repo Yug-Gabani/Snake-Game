@@ -85,3 +85,6 @@
 
 <br>→The game may not run on non-Windows systems due to the use of windows.h for console manipulation.
 <br>→The speed may be too fast or too slow on certain systems.
+
+<h2>🔴Github i'd</h2>
+<br>👉[Yug Gabani](https://github.com/Yug-Gabani)
