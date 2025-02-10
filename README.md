@@ -39,7 +39,7 @@
 <br>→Easy: Slower snake speed (difficulty level 1)
 <br>→Medium: Default snake speed (difficulty level 2)
 <br>→Hard: Faster snake speed (difficulty level 3)
-<br>→You can choose the difficulty level before starting the game by entering a number (1 for Easy, 2 for Medium, 3 for Hard).
+<br>→You can choose the difficulty level before starting the game by entering a number (1 for Easy, 2 for Medium, 3 for Hard).(For difficulty level predefined speed for snake is set)
 
 <h2>🔴How to Run</h2>
 
