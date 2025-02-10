@@ -78,7 +78,6 @@
 
 <h2>🔴Customization</h2>
 <br>👉You can adjust the following parameters:
-
 <br>→Game Size: Modify the width and height when creating the SnackRun object to change the game's grid size.
 <br>→Difficulty: Choose between easy, medium, or hard difficulty to change the game's speed.
 
