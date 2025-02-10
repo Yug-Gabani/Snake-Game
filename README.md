@@ -6,11 +6,11 @@
 
 <h2>Features</h2>
 
-Snake Movement: Control the snake using arrow keys (W, A, S, D) to move up, left, down, and right.
-Food: The snake eats food represented by an apple (🍎), which increases its length and score.
-Walls and Collision: If the snake runs into the walls or its own body, the game ends.
-Difficulty Levels: Three difficulty levels are available, affecting the speed of the game.
-Game Restart: After a game over, you can restart the game by pressing "R".
+<br>Snake Movement: Control the snake using arrow keys (W, A, S, D) to move up, left, down, and right.
+<br>Food: The snake eats food represented by an apple (🍎), which increases its length and score.
+<br>Walls and Collision: If the snake runs into the walls or its own body, the game ends.
+<br>Difficulty Levels: Three difficulty levels are available, affecting the speed of the game.
+<br>Game Restart: After a game over, you can restart the game by pressing "R".
 Controls
 
 W - Move Up
