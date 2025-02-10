@@ -98,8 +98,7 @@ public:
 
         for (int i = 0; i < width + 2; ++i) cout << "🧱";
         
-        // Display the score, ensuring it's always displayed in two digits when below 10
-        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  // Ensure two-digit display
+        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  
     }
 
     void resetGame() {
@@ -156,13 +155,11 @@ public:
             default:    break;
         }
 
-        // Check if the snake hits the boundaries (game over condition)
         if (x < 0 || x >= width || y < 0 || y >= height) {
             gameOver = true;
             return;
         }
 
-        // Check if the snake collides with itself (game over condition)
         for (const auto& bodyPart : snakeBody) {
             if (bodyPart.first == x && bodyPart.second == y) {
                 gameOver = true;
@@ -170,15 +167,12 @@ public:
             }
         }
 
-        // Add new head to the snake's body
         snakeBody.push_back({x, y});
-        
-        // If the snake eats the food, increase the score by 1
+    
         if (x == foodX && y == foodY) {
             score += 1;  // Increase score by 1
             generateFood();
         } else {
-            // If the snake didn't eat food, remove the last part of the snake's body (move the snake)
             snakeBody.erase(snakeBody.begin());
         }
     }
