@@ -1,40 +1,56 @@
-<h1>🔴 Snake Game :</h1>
+<h1>SnackRun - Snake Game</h1>
 
-This is a simple implementation of the classic Snake game using C++ and console graphics. The snake moves around the screen, eating food to grow longer, and the player must avoid crashing into the walls or the snake's own body.
+<h2>Overview</h2>
 
-<h1>🔴 Features :</h1>
-<br>👉Classic Snake gameplay.
-<br>👉Dynamic food generation.
-<br>👉Score tracking.
-<br>👉Game Over screen with final score.
-<br>👉Customizable grid size.
-<br>👉Snake and food displayed using emojis (🧱, 🐲, 🐍, 🍎).
+<br>SnackRun is a classic Snake Game developed in C++. The game features a snake that grows longer as it eats food, and the player must avoid running into the walls or its own body. It offers three difficulty levels: Easy, Medium, and Hard, where the speed of the game changes based on the difficulty selected.
 
-<h1>🔴 Requirements</h1>
-To run the game, you'll need
-<br>👉A C++ compiler (e.g., GCC or MSVC).
-<br>👉Windows operating system for the console-based UI (uses Windows-specific libraries like windows.h).
-<br>👉An IDE or text editor like Visual Studio or Code::Blocks.
+Features
 
-<h1>🔴Installation</h1>
+Snake Movement: Control the snake using arrow keys (W, A, S, D) to move up, left, down, and right.
+Food: The snake eats food represented by an apple (🍎), which increases its length and score.
+Walls and Collision: If the snake runs into the walls or its own body, the game ends.
+Difficulty Levels: Three difficulty levels are available, affecting the speed of the game.
+Game Restart: After a game over, you can restart the game by pressing "R".
+Controls
 
-<br>1.Clone or download the repository to your local machine.
-<br>2.Open the project in your preferred C++ IDE or editor.
-<br>3.Compile the code using your C++ compiler.
+W - Move Up
+A - Move Left
+S - Move Down
+D - Move Right
+X - Exit the Game
+R - Restart the Game (after game over)
+How to Run
 
-<h1>🔴Usage</h1>
-<br>To play the game, follow these steps:
-<br>1.Compile the SnakeGame.cpp file.
-<br>2.Run the compiled program.
-<h2>⛔️Controls:</h2>
-<br>👉Use W to move UP.
-<br>👉Use A to move LEFT.
-<br>👉Use S to move DOWN.
-<br>👉Use D to move RIGHT.
-<br>👉Press X to quit the game.
+Clone or download the project files to your local machine.
+Make sure you have a C++ compiler installed. This game requires the Windows console, so make sure you are working on a Windows environment.
+Open the project in a C++ IDE or use the command line to compile the code.
+Compile the game using a C++ compiler, such as g++, and run the executable.
+Follow the on-screen instructions to start the game.
+Example Compilation Command
 
-<h1>🔴How the Game Works</h1>
-<br>👉The snake starts at the center of the grid.
-<br>👉Food (🍎) randomly appears on the grid, and the snake needs to "eat" it to grow.
-<br>👉As the snake eats more food, its body length increases.
-<br>👉The game ends when the snake collides with a wall or itself.
+If you are using g++:
+
+g++ -o SnakeGame SnakeGame.cpp
+./SnakeGame
+Code Explanation
+
+SnakeGame Class: Contains the core logic for the game, such as movement, food generation, and collision detection.
+SnackRun Class: Inherits from the SnakeGame class, adds functionality for user input, game logic, and managing difficulty.
+setDifficulty: Sets the game speed based on the selected difficulty level.
+Input Handling: Uses conio.h to capture keyboard inputs during gameplay.
+Graphics: Simple console graphics are used with symbols such as 🧱 for walls, 🐍 for the snake, and 🍎 for food.
+Customization
+
+You can adjust the following parameters:
+
+Game Size: Modify the width and height when creating the SnackRun object to change the game's grid size.
+Difficulty: Choose between easy, medium, or hard difficulty to change the game's speed.
+Known Issues
+
+The game may not run on non-Windows systems due to the use of windows.h for console manipulation.
+The speed may be too fast or too slow on certain systems.
+License
+
+This project is open-source and free to use, modify, and distribute.
+
+I hope this helps! Let me know if you need any adjustments to the readme.
