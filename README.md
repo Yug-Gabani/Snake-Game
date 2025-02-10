@@ -71,7 +71,6 @@
 <br>→Change Graphics: You can modify the symbols used to represent the snake, food, and walls. For example, you could replace the snake with a different character or use different colors if you have advanced console handling.
 
 <h2>🔴Customization</h2>
-
 <br>👉You can adjust the following parameters:
 
 <br>→Game Size: Modify the width and height when creating the SnackRun object to change the game's grid size.
