@@ -65,13 +65,13 @@
 <br>The snake moves in the direction chosen by the player. Each time it eats food, it grows longer, and the score increases.
 <br>If the snake collides with a wall or its own body, the game ends.
 <br>After the game ends, the player can choose to restart or exit the game.
-,br>Project Customization
 
-You can modify and extend this project as follows:
+<br>👉Project Customization
 
-Change the Grid Size: Modify the width and height when creating the SnackRun object to create larger or smaller playing areas.
-Adjust Speed and Controls: If you prefer different keys or want to tweak the game's speed even further, you can modify the difficulty settings and input handling.
-Change Graphics: You can modify the symbols used to represent the snake, food, and walls. For example, you could replace the snake with a different character or use different colors if you have advanced console handling.
+<br>You can modify and extend this project as follows:
+<br>→Change the Grid Size: Modify the width and height when creating the SnackRun object to create larger or smaller playing areas.
+<br>→Adjust Speed and Controls: If you prefer different keys or want to tweak the game's speed even further, you can modify the difficulty settings and input handling.
+<br>→Change Graphics: You can modify the symbols used to represent the snake, food, and walls. For example, you could replace the snake with a different character or use different colors if you have advanced console handling.
 
 <h2>🔴Customization</h2>
 
