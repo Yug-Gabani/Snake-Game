@@ -14,7 +14,7 @@
 - [Code Explanation](#code-explanation)
 - [Customization](#customization)
 - [Known Issues](#known-issues)
-- [Github i'd](#github-i'd)
+- [Github id](#github-id)
 
 <h2>🔴Features</h2>
 
@@ -98,5 +98,6 @@
 <br>→The game may not run on non-Windows systems due to the use of windows.h for console manipulation.
 <br>→The speed may be too fast or too slow on certain systems.
 
-<h2>🔴Github i'd</h2>
+<h2>🔴Github id</h2>
 -  [Yug Gabani](https://github.com/Yug-Gabani)
+-  [Het Bhungaliya](https://github.com/hetpatel06)
