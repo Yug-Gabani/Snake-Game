@@ -32,7 +32,8 @@
 
 <h2>🔴If you are using g++:</h2>
 
-<br>g++ -o SnakeGame SnakeGame.cpp./SnakeGame
+<br>g++ -o SnakeGame SnakeGame.cpp
+<br>./SnakeGame
 
 <h2>🔴Code Explanation</h2>
 
