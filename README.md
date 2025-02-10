@@ -7,15 +7,14 @@
 
 ## Table of Contents
 - [Features](#features)
-- [installation](#installation)
-- [features](#features)
-- [data Structures Used](#data-structures-used)
-- [how the Game Works](#how-the-game-works)
-- [how to Play](#how-to-play)
-- [compilation and Execution](#compilation-and-execution)
-- [future Improvements](#future-improvements)
-- [creators](#creators)
-
+- [Controls](#controls)
+- [Difficulty Levels](#difficulty-levels)
+- [How to Run](#how-to-run)
+- [If you are using g++](#if-you-are-using-g++)
+- [Code Explanation](#code-explanation)
+- [Customization](#customization)
+- [Known Issues](#known-issues)
+- [Github i'd](#github-i'd)
 
 <h2>🔴Features</h2>
 
