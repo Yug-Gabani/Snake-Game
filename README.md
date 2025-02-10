@@ -37,11 +37,41 @@
 
 <h2>🔴Code Explanation</h2>
 
-<br>→SnakeGame Class: Contains the core logic for the game, such as movement, food generation, and collision detection.
-<br>→SnackRun Class: Inherits from the SnakeGame class, adds functionality for user input, game logic, and managing difficulty.
-<br>→setDifficulty: Sets the game speed based on the selected difficulty level.
-<br>→Input Handling: Uses conio.h to capture keyboard inputs during gameplay.
-<br>→Graphics: Simple console graphics are used with symbols such as 🧱 for walls, 🐍 for the snake, and 🍎 for food.
+<br>👉SnakeGame Class
+<br>  →The SnakeGame class contains the main game logic:
+
+<br>→Game State: Manages the game state, including the snake's position, score, and the food's location.
+<br>→Movement: Updates the snake's position based on user input.
+<br>→Food Generation: Randomly generates food on the grid.
+<br>→Collision Detection: Checks if the snake collides with walls or itself.
+
+<br>👉SnackRun Class
+
+→The SnackRun class inherits from SnakeGame and adds user input handling and game loop functionality:
+
+<br>Input Handling: Captures user input to control the snake using the conio.h library (_kbhit() and _getch()).
+<br>Game Loop: The run() method runs the game loop, continuously drawing the game, accepting input, and updating the game state until a game-over condition is met.
+<br>Difficulty: The game speed is adjusted according to the difficulty level set by the player.
+<br>👉Graphics
+<br>The game uses console-based graphics, represented by characters such as:
+<br>🧱 for walls
+<br>🐍 for the snake
+<br>🍎 for food
+<br>The game area is drawn in the console using simple ASCII-style graphics. The snake is made up of several body parts that move along the grid.
+
+<br>👉Game Flow
+
+<br>The game starts with an empty grid, a snake at the center of the screen, and a food item placed randomly.
+<br>The snake moves in the direction chosen by the player. Each time it eats food, it grows longer, and the score increases.
+<br>If the snake collides with a wall or its own body, the game ends.
+<br>After the game ends, the player can choose to restart or exit the game.
+,br>Project Customization
+
+You can modify and extend this project as follows:
+
+Change the Grid Size: Modify the width and height when creating the SnackRun object to create larger or smaller playing areas.
+Adjust Speed and Controls: If you prefer different keys or want to tweak the game's speed even further, you can modify the difficulty settings and input handling.
+Change Graphics: You can modify the symbols used to represent the snake, food, and walls. For example, you could replace the snake with a different character or use different colors if you have advanced console handling.
 
 <h2>🔴Customization</h2>
 
