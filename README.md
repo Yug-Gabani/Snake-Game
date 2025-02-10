@@ -87,4 +87,4 @@
 <br>→The speed may be too fast or too slow on certain systems.
 
 <h2>🔴Github i'd</h2>
-<br>👉[Yug Gabani](https://github.com/Yug-Gabani)
+-  [Yug Gabani](https://github.com/Yug-Gabani)
