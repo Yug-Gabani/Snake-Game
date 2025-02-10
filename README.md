@@ -10,7 +10,7 @@
 - [Controls](#controls)
 - [Difficulty Levels](#difficulty-levels)
 - [How to Run](#how-to-run)
-- [If you are using g++](#if-you-are-using-g++)
+- [If you are using gcc](#if-you-are-using-gcc)
 - [Code Explanation](#code-explanation)
 - [Customization](#customization)
 - [Known Issues](#known-issues)
@@ -49,7 +49,7 @@
 <br>→Follow the on-screen instructions to start the game.
 <br>→Example Compilation Command
 
-<h2>🔴If you are using g++</h2>
+<h2>🔴If you are using gcc</h2>
 
 <br>g++ Snake.cpp -o SnakeGame
 <br>./SnakeGame
