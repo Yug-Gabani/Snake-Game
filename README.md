@@ -81,7 +81,7 @@
 <br>→Game Size: Modify the width and height when creating the SnackRun object to change the game's grid size.
 <br>→Difficulty: Choose between easy, medium, or hard difficulty to change the game's speed.
 
-<h1>🔴Known Issues</h1>
+<h2>🔴Known Issues</h2>
 
 <br>→The game may not run on non-Windows systems due to the use of windows.h for console manipulation.
 <br>→The speed may be too fast or too slow on certain systems.
