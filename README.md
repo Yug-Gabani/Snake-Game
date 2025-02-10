@@ -32,7 +32,7 @@
 <br>→S - Move Down
 <br>→D - Move Right
 <br>→X - Exit the Game
-<br>→R - Restart the Game (after game over)
+<br>→R - Restart the Game (after game over) ( we can also control game by arrow keys which can be implemented in code by small change)
 
 <h2>🔴Difficulty Levels:</h2>
 <br>👉The game supports three different difficulty levels, which influence the speed of the game:
