@@ -39,7 +39,6 @@
 
 <br>👉SnakeGame Class
 <br>  →The SnakeGame class contains the main game logic:
-
 <br>→Game State: Manages the game state, including the snake's position, score, and the food's location.
 <br>→Movement: Updates the snake's position based on user input.
 <br>→Food Generation: Randomly generates food on the grid.
@@ -47,8 +46,7 @@
 
 <br>👉SnackRun Class
 
-→The SnackRun class inherits from SnakeGame and adds user input handling and game loop functionality:
-
+<br>→The SnackRun class inherits from SnakeGame and adds user input handling and game loop functionality:
 <br>Input Handling: Captures user input to control the snake using the conio.h library (_kbhit() and _getch()).
 <br>Game Loop: The run() method runs the game loop, continuously drawing the game, accepting input, and updating the game state until a game-over condition is met.
 <br>Difficulty: The game speed is adjusted according to the difficulty level set by the player.
