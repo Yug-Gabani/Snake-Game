@@ -21,6 +21,13 @@
 <br>→X - Exit the Game
 <br>→R - Restart the Game (after game over)
 
+<h2>🔴Difficulty Levels:</h2>
+<br>👉The game supports three different difficulty levels, which influence the speed of the game:
+<br>→Easy: Slower snake speed (difficulty level 1)
+<br>→Medium: Default snake speed (difficulty level 2)
+<br>→Hard: Faster snake speed (difficulty level 3)
+<br>→You can choose the difficulty level before starting the game by entering a number (1 for Easy, 2 for Medium, 3 for Hard).
+
 <h2>🔴How to Run</h2>
 
 <br>→Clone or download the project files to your local machine.
