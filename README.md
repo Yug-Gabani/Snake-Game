@@ -4,7 +4,7 @@
 
 <br>SnackRun is a classic Snake Game developed in C++. The game features a snake that grows longer as it eats food, and the player must avoid running into the walls or its own body. It offers three difficulty levels: Easy, Medium, and Hard, where the speed of the game changes based on the difficulty selected.
 
-Features
+<h2>Features</h2>
 
 Snake Movement: Control the snake using arrow keys (W, A, S, D) to move up, left, down, and right.
 Food: The snake eats food represented by an apple (🍎), which increases its length and score.
