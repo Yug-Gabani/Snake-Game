@@ -1,8 +1,21 @@
 <h1>⚪️SnackRun - Snake Game</h1>
 
+
 <h2>🔴Overview</h2>
 
 <br>SnackRun is a classic Snake Game developed in C++. The game features a snake that grows longer as it eats food, and the player must avoid running into the walls or its own body. It offers three difficulty levels: Easy, Medium, and Hard, where the speed of the game changes based on the difficulty selected.
+
+## Table of Contents
+- [Features](#introduction)
+- [Installation](#installation)
+- [Features](#features)
+- [Data Structures Used](#data-structures-used)
+- [How the Game Works](#how-the-game-works)
+- [How to Play](#how-to-play)
+- [Compilation and Execution](#compilation-and-execution)
+- [Future Improvements](#future-improvements)
+- [Creators](#creators)
+
 
 <h2>🔴Features</h2>
 
