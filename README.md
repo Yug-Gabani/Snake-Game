@@ -103,7 +103,3 @@
 <br>- <a href="https://github.com/hetpatel06">Het Bhungaliya</a>
 <br>- <a href="https://github.com/shyambhuva">shyambhuva</a>
 <br>- <a href="https://github.com/VivekAmipara05">Vivek Amipara</a>
-
-<br>-  [Het Bhungaliya](https://github.com/hetpatel06)
-<br>-  [shyambhuva](https://github.com/shyambhuva)
-<br>-  [vivek](https://github.com/VivekAmipara05)
