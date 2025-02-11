@@ -98,10 +98,9 @@
 <br>→The game may not run on non-Windows systems due to the use of windows.h for console manipulation.
 <br>→The speed may be too fast or too slow on certain systems.
 
-<h2>🔴Github id</h2>
-<pre style="text-decoration:none;">
-<br> <a href="https://github.com/Yug-Gabani">Yug_Gabani</a>
-<br> <a href="https://github.com/hetpatel06">Het_Bhungaliya</a>
-<br> <a href="https://github.com/shyambhuva">Shyam_Bhuva</a>
-<br> <a href="https://github.com/VivekAmipara05">Vivek_Amipara</a>
-</pre>
+<h2>🔴 Github ID</h2>
+
+<a href="https://github.com/Yug-Gabani" style="text-decoration: none; display: block;">Yug_Gabani</a>
+<a href="https://github.com/hetpatel06" style="text-decoration: none; display: block;">Het_Bhungaliya</a>
+<a href="https://github.com/shyambhuva" style="text-decoration: none; display: block;">Shyam_Bhuva</a>
+<a href="https://github.com/VivekAmipara05" style="text-decoration: none; display: block;">Vivek_Amipara</a>
