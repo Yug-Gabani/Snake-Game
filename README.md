@@ -99,7 +99,7 @@
 <br>→The speed may be too fast or too slow on certain systems.
 
 <h2>🔴Github id</h2>
-<pre style="text-decoration:wawy;">
+<pre style="text-decoration:none;">
 <br> <a href="https://github.com/Yug-Gabani">Yug_Gabani</a>
 <br> <a href="https://github.com/hetpatel06">Het_Bhungaliya</a>
 <br> <a href="https://github.com/shyambhuva">Shyam_Bhuva</a>
