@@ -101,5 +101,5 @@
 <h2>🔴Github id</h2>
 <br>- <a href="https://github.com/Yug-Gabani">Yug Gabani</a>
 <br>- <a href="https://github.com/hetpatel06">Het Bhungaliya</a>
-<br>- <a href="https://github.com/shyambhuva">shyambhuva</a>
+<br>- <a href="https://github.com/shyambhuva">Shyam Bhuva</a>
 <br>- <a href="https://github.com/VivekAmipara05">Vivek Amipara</a>
