@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-#include <conio.h>  
+#include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
 #include <cstdlib>  
 #include <ctime>    
 #include <windows.h> 
