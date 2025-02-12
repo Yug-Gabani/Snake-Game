@@ -44,11 +44,11 @@ protected:
     int difficultySpeed;
 
 public:
-    SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) {
-        x = width / 2;
+    SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { //initial value assigned
+        x = width / 2; //everytime snake starts from middle 
         y = height / 2;
         generateFood();
-        snakeBody.push_back({x, y});
+        snakeBody.push_back({x, y}); //inital 3 unit body 
         snakeBody.push_back({x-1, y}); 
         snakeBody.push_back({x-2, y}); 
     }
@@ -63,14 +63,14 @@ public:
     }
 
     void generateFood() {
-        foodX = rand() % width;
+        foodX = rand() % width;  //modulo because to take the random number  genrated into the range of grid
         foodY = rand() % height;
     }
 
     void draw() {
         setCursorPosition(0, 0);
         
-        for (int i = 0; i < width + 2; ++i) cout << "🧱";
+        for (int i = 0; i < width + 2; ++i) cout << "🧱"; // +2 because boundary is for snake wall is just touching to show the boundary
         cout << endl;
 
         for (int i = 0; i < height; ++i) {
