@@ -36,7 +36,7 @@ class SnakeGame { // main logic
 protected:
     int width, height; //all variable for gametrack,score,speed,snake body coordinate
     bool gameOver;
-    int x, y; // snake head
+    int x, y; // snake head at initial stage
     int foodX, foodY; 
     int score;
     Direction dir;
@@ -120,8 +120,8 @@ public:
     SnackRun(int w, int h) : SnakeGame(w, h) {} 
 
     void input() {
-        if (_kbhit()) { 
-            switch (_getch()) {
+        if (_kbhit()) {   // to detect the input by user 
+            switch (_getch()) { //detect that input and changes direction according 
             case 'a':
                 if (dir != RIGHT) dir = LEFT;
                 break;
