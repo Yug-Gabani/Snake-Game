@@ -146,16 +146,16 @@ public:
     void logic() {
         pair<int, int> prevHead = {x, y};
         
-        // Move the snake's head in the direction
+        // Move the snake's head according input direction
         switch (dir) {
             case LEFT:  --x; break;
             case RIGHT: ++x; break;
-            case UP:    --y; break;
-            case DOWN:  ++y; break;
+            case UP:    --y; break; //-- because as per computer coordinate system y-- than point moves up
+            case DOWN:  ++y; break; // vice versa
             default:    break;
         }
 
-        if (x < 0 || x >= width || y < 0 || y >= height) {
+        if (x < 0 || x >= width || y < 0 || y >= height) { //game gets over when snake touches boundary
             gameOver = true;
             return;
         }
@@ -201,6 +201,9 @@ public:
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     srand(static_cast<unsigned>(time(0))); 
+    string s;
+    cout<<"Enter the name of the player:"<<endl;
+    cin>>s;
 
     int difficulty;
     cout << "Choose difficulty level (1: Easy, 2: Medium, 3: Hard): ";
@@ -209,5 +212,6 @@ int main() {
     SnackRun game(25, 25); 
     game.setDifficulty(difficulty); 
     game.run();
+    cout<<"Thanks "<<s<<" for playing"<<endl;
     return 0;
 }
