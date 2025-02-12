@@ -9,11 +9,11 @@ using namespace std;
 
 enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
-void setCursorPosition(int x, int y) {
+void setCursorPosition(int x, int y) { // used to move cursor at given coordinate using coord it is part of <window.h>
     COORD coord;
     coord.X = x;
     coord.Y = y;
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
 }
 
 void hideCursor() {
