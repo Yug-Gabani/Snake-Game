@@ -170,7 +170,7 @@ public:
         snakeBody.push_back({x, y});
     
         if (x == foodX && y == foodY) {
-            score += 1;  // Increase score by 1
+            score += 10;  // Increase score by 1
             generateFood();
         } else {
             snakeBody.erase(snakeBody.begin());
