@@ -7,7 +7,7 @@
 
 using namespace std;
 
-enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN };
+enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
 void setCursorPosition(int x, int y) {
     COORD coord;
