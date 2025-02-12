@@ -10,13 +10,13 @@ using namespace std;
 enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
 void setCursorPosition(int x, int y) { // used to move cursor at given coordinate using coord it is part of <window.h>
-    COORD coord;
+    COORD coord; // to avoid flicker
     coord.X = x;
     coord.Y = y;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
 }
 
-void hideCursor() {
+void hideCursor() { // function is made to hide cursor whike showing boundary and snake units, all the element are built
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
     GetConsoleCursorInfo(consoleHandle, &cursorInfo);
@@ -24,7 +24,7 @@ void hideCursor() {
     SetConsoleCursorInfo(consoleHandle, &cursorInfo);
 }
 
-void showCursor() {
+void showCursor() { // to show cursor when needed mostly at the end of game
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
     GetConsoleCursorInfo(consoleHandle, &cursorInfo);
@@ -32,12 +32,12 @@ void showCursor() {
     SetConsoleCursorInfo(consoleHandle, &cursorInfo);
 }
 
-class SnakeGame {
+class SnakeGame { // main logic
 protected:
-    int width, height;
+    int width, height; //all variable for gametrack,score,speed,snake body coordinate
     bool gameOver;
-    int x, y; 
-    int foodX, foodY;
+    int x, y; // snake head
+    int foodX, foodY; 
     int score;
     Direction dir;
     vector<pair<int, int>> snakeBody; 
