@@ -101,7 +101,7 @@ public:
         cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  
     }
 
-    void resetGame() {
+    void resetGame() { // default value assigned to each parameter
         gameOver = false;
         score = 0;
         x = width / 2;
@@ -179,10 +179,18 @@ public:
 
     void run() {
         hideCursor();
+        int difference=0;
+        int previousscore=0;
         while (!gameOver) {
             draw();
             input();
-            if (dir != STOP) logic(); 
+            if (dir != STOP) logic();
+            difference=score-previousscore;
+            if(difference>5){ //at each inrease of 5 score speed of snake increase
+                difficultySpeed-=15;
+                previousscore=score;
+            } 
+            
             Sleep(difficultySpeed); 
         }
         showCursor();
