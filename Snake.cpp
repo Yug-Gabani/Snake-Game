@@ -2,7 +2,7 @@
 #include <vector>   //for using vector container
 #include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
 #include <cstdlib>  //rendom number generation 
-#include <ctime>    //
+#include <ctime>    
 #include <windows.h> 
 using namespace std;
 
