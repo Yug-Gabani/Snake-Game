@@ -185,12 +185,12 @@ public:
             input();
             if (dir != STOP) logic();
             difference=score-previousscore;
-            if(difference>5){ //at each inrease of 5 score speed of snake increase
+            if(difference>5){ //at each inrease of 5 score speed of snake speed increase
                 difficultySpeed-=15;
                 previousscore=score;
             } 
             
-            Sleep(difficultySpeed); //push to control the speed of the game
+            Sleep(difficultySpeed); // to control the speed of the game
         }
         showCursor(); // show the cursor again when the game is over
         cout << "Game Over! Final Score: " << score << endl;
@@ -206,7 +206,7 @@ public:
 };
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8); // to support special charaters
+    SetConsoleOutputCP(CP_UTF8); 
     srand(static_cast<unsigned>(time(0))); //seed the rendom number generator with the current time 
     string s;
     cout<<"Enter the name of the player:"<<endl;
