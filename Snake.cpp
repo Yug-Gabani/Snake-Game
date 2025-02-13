@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+#include <iostream> //for input - output operations
+#include <vector>   //for using vector container
 #include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
 #include <cstdlib>  
 #include <ctime>    
