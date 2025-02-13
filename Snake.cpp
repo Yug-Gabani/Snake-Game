@@ -190,35 +190,35 @@ public:
                 previousscore=score;
             } 
             
-            Sleep(difficultySpeed); 
+            Sleep(difficultySpeed); //push to control the speed of the game
         }
-        showCursor();
+        showCursor(); // show the cursor again when the game is over
         cout << "Game Over! Final Score: " << score << endl;
 
         char choice;
         cout << "Press 'R' to restart or any other key to exit: ";
         cin >> choice;
         if (choice == 'R' || choice == 'r') {
-            resetGame(); 
+            resetGame(); // reset the game and run again if 'R' or 'r' is pressed
             run(); 
         }
     }
 };
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
-    srand(static_cast<unsigned>(time(0))); 
+    SetConsoleOutputCP(CP_UTF8); // to support special charaters
+    srand(static_cast<unsigned>(time(0))); //seed the rendom number generator with the current time 
     string s;
     cout<<"Enter the name of the player:"<<endl;
-    cin>>s;
+    cin>>s; // player name input
 
     int difficulty;
     cout << "Choose difficulty level (1: Easy, 2: Medium, 3: Hard): ";
-    cin >> difficulty;
+    cin >> difficulty; // player chooses difficulty level
 
-    SnackRun game(25, 25); 
-    game.setDifficulty(difficulty); 
-    game.run();
-    cout<<"Thanks "<<s<<" for playing"<<endl;
+    SnackRun game(25, 25); // create a game object with a 25X25 grid
+    game.setDifficulty(difficulty); // set the game difficulty
+    game.run(); //start the game
+    cout<<"Thanks "<<s<<" for playing"<<endl; 
     return 0;
 }
