@@ -117,10 +117,10 @@ public:
 
 class SnackRun : public SnakeGame {
 public:
-    SnackRun(int w, int h) : SnakeGame(w, h) {} 
+    SnackRun(int w, int h) : SnakeGame(w, h) {} //Constructor for SnackRun
 
     void input() {
-        if (_kbhit()) {   // to detect the input by user 
+        if (_kbhit()) {  // check if a key has been pressed
             switch (_getch()) { //detect that input and changes direction according 
             case 'a':
                 if (dir != RIGHT) dir = LEFT;
@@ -140,14 +140,13 @@ public:
             }
         }
 
-        if (dir == STOP) dir = RIGHT; 
+        if (dir == STOP) dir = RIGHT; //defult direction is RIGHT when the game is strats
     }
 
     void logic() {
         pair<int, int> prevHead = {x, y};
         
-        // Move the snake's head according input direction
-        switch (dir) {
+        switch (dir) { // Move the snake's head according input direction
             case LEFT:  --x; break;
             case RIGHT: ++x; break;
             case UP:    --y; break; //-- because as per computer coordinate system y-- than point moves up
@@ -155,13 +154,13 @@ public:
             default:    break;
         }
 
-        if (x < 0 || x >= width || y < 0 || y >= height) { //game gets over when snake touches boundary
+        if (x < 0 || x >= width || y < 0 || y >= height) { //game gets over when snake touches wall
             gameOver = true;
             return;
         }
 
         for (const auto& bodyPart : snakeBody) {
-            if (bodyPart.first == x && bodyPart.second == y) {
+            if (bodyPart.first == x && bodyPart.second == y) {// check for body collision 
                 gameOver = true;
                 return;
             }
@@ -169,16 +168,16 @@ public:
 
         snakeBody.push_back({x, y});
     
-        if (x == foodX && y == foodY) {
+        if (x == foodX && y == foodY) { // if snake is eat food
             score += 10;  // Increase score by 1
             generateFood();
         } else {
-            snakeBody.erase(snakeBody.begin());
+            snakeBody.erase(snakeBody.begin()); // remove tail segment if food is not eaten  
         }
     }
 
     void run() {
-        hideCursor();
+        hideCursor();//hide the cursor for a cleaner display
         int difference=0;
         int previousscore=0;
         while (!gameOver) {
