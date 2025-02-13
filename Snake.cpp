@@ -3,14 +3,13 @@
 #include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
 #include <cstdlib>  //rendom number generation 
 #include <ctime>    
-#include <windows.h> // For Windows-specific functionality like SetConsoleCursorPosition and Sleep
-
+#include <windows.h> 
 using namespace std;
 
 enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
 void setCursorPosition(int x, int y) { // used to move cursor at given coordinate using coord it is part of <window.h>
-    COORD coord; // to avoid flicker
+    COORD coord; 
     coord.X = x; //set x-coordinate
     coord.Y = y; //set y-coordinate
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
