@@ -15,23 +15,23 @@ void setCursorPosition(int x, int y) {  // used to move cursor at given coordina
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
 }
 
-void hideCursor() { // function is made to hide cursor whike showing boundary and snake units, all the element are built
+void hideCursor() {                                        // function is made to hide cursor whike showing boundary and snake units, all the element are built
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo); //Get the current cursor info
-    cursorInfo.bVisible = false; // Make the cursor invisible
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo); // Apply the new cursor settings
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      //Get the current cursor info
+    cursorInfo.bVisible = false;                           // Make the cursor invisible
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      // Apply the new cursor settings
 }
 
-void showCursor() { // to show cursor when needed mostly at the end of game
+void showCursor() {                                        // to show cursor when needed mostly at the end of game
     HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo);//Get the current cursor info
-    cursorInfo.bVisible = true; // Make the cursor visible
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo); // Apply the new cursor settings
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      //Get the current cursor info
+    cursorInfo.bVisible = true;                            // Make the cursor visible
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      // Apply the new cursor settings
 }
 
-class SnakeGame { // main logic
+class SnakeGame {                                          // main logic
 protected:
     int width, height;    //all variable for gametrack,score,speed,snake body coordinate
     bool gameOver;        //flag indicating if the game is over 
