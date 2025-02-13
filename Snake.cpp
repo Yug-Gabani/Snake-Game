@@ -1,9 +1,9 @@
 #include <iostream> //for input - output operations
 #include <vector>   //for using vector container
 #include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
-#include <cstdlib>  
+#include <cstdlib>  //rendom number generation 
 #include <ctime>    
-#include <windows.h> 
+#include <windows.h> // For Windows-specific functionality like SetConsoleCursorPosition and Sleep
 
 using namespace std;
 
@@ -11,41 +11,41 @@ enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
 void setCursorPosition(int x, int y) { // used to move cursor at given coordinate using coord it is part of <window.h>
     COORD coord; // to avoid flicker
-    coord.X = x;
-    coord.Y = y;
+    coord.X = x; //set x-coordinate
+    coord.Y = y; //set y-coordinate
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
 }
 
 void hideCursor() { // function is made to hide cursor whike showing boundary and snake units, all the element are built
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo);
-    cursorInfo.bVisible = false; 
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo);
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo); //Get the current cursor info
+    cursorInfo.bVisible = false; // Make the cursor invisible
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo); // Apply the new cursor settings
 }
 
 void showCursor() { // to show cursor when needed mostly at the end of game
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo);
-    cursorInfo.bVisible = true;
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo);
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);//Get the current cursor info
+    cursorInfo.bVisible = true; // Make the cursor visible
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo); // Apply the new cursor settings
 }
 
 class SnakeGame { // main logic
 protected:
     int width, height; //all variable for gametrack,score,speed,snake body coordinate
-    bool gameOver;
+    bool gameOver; //flag indicating if the game is over 
     int x, y; // snake head at initial stage
-    int foodX, foodY; 
-    int score;
-    Direction dir;
-    vector<pair<int, int>> snakeBody; 
-    int difficultySpeed;
+    int foodX, foodY; //position of the food 
+    int score; // player's score
+    Direction dir; //direction the snake is moving in
+    vector<pair<int, int>> snakeBody; //stores the body parts of the snake as pairs of coordinates
+    int difficultySpeed; // speed of the game, adjusted based on difficulty
 
 public:
     SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { //initial value assigned
-        x = width / 2; //everytime snake starts from middle 
+        x = width / 2; //initial snake position(here snake position is middle)
         y = height / 2;
         generateFood();
         snakeBody.push_back({x, y}); //inital 3 unit body 
@@ -55,10 +55,10 @@ public:
 
     void setDifficulty(int level) {
         switch(level) {
-            case 1: difficultySpeed = 150; break; 
-            case 2: difficultySpeed = 100; break; 
-            case 3: difficultySpeed = 50; break; 
-            default: difficultySpeed = 100; break; 
+            case 1: difficultySpeed = 150; break; // Easy difficulty
+            case 2: difficultySpeed = 100; break; // Medium difficulty
+            case 3: difficultySpeed = 50; break; // Hard difficulty
+            default: difficultySpeed = 100; break; // Default to medium
         }
     }
 
