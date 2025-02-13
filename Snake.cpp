@@ -76,29 +76,29 @@ public:
         for (int i = 0; i < height; ++i) {
             for (int j = 0; j < width + 2; ++j) {
                 if (j == 0 || j == width + 1) {
-                    cout << "🧱"; 
+                    cout << "🧱"; //left and right borders
                 } else if (i == y && j == x + 1) {
-                    cout << "🐲"; 
+                    cout << "🐲"; //snake's head
                 } else if (i == foodY && j == foodX + 1) {
-                    cout << "🍎";
+                    cout << "🍎"; //food
                 } else {
                     bool isBody = false;
                     for (const auto& bodyPart : snakeBody) {
                         if (bodyPart.first == j - 1 && bodyPart.second == i) {
-                            cout << "🐍";
+                            cout << "🐍"; //snake's body
                             isBody = true;
                             break;
                         }
                     }
-                    if (!isBody) cout << "  "; 
+                    if (!isBody) cout << "  "; // empty space
                 }
             }
             cout << endl;
         }
 
-        for (int i = 0; i < width + 2; ++i) cout << "🧱";
+        for (int i = 0; i < width + 2; ++i) cout << "🧱"; // print the bottom of the border
         
-        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  
+        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  //display score
     }
 
     void resetGame() { // default value assigned to each parameter
