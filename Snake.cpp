@@ -2,16 +2,16 @@
 #include <vector>   //for using vector container
 #include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
 #include <cstdlib>  //rendom number generation 
-#include <ctime>    
+#include <ctime>    //
 #include <windows.h> 
 using namespace std;
 
 enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
 
-void setCursorPosition(int x, int y) { // used to move cursor at given coordinate using coord it is part of <window.h>
+void setCursorPosition(int x, int y) {  // used to move cursor at given coordinate using coord it is part of <window.h>
     COORD coord; 
-    coord.X = x; //set x-coordinate
-    coord.Y = y; //set y-coordinate
+    coord.X = x;                        //set x-coordinate
+    coord.Y = y;                        //set y-coordinate
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
 }
 
@@ -33,14 +33,14 @@ void showCursor() { // to show cursor when needed mostly at the end of game
 
 class SnakeGame { // main logic
 protected:
-    int width, height; //all variable for gametrack,score,speed,snake body coordinate
-    bool gameOver; //flag indicating if the game is over 
-    int x, y; // snake head at initial stage
-    int foodX, foodY; //position of the food 
-    int score; // player's score
-    Direction dir; //direction the snake is moving in
+    int width, height;    //all variable for gametrack,score,speed,snake body coordinate
+    bool gameOver;        //flag indicating if the game is over 
+    int x, y;             // snake head at initial stage
+    int foodX, foodY;     //position of the food 
+    int score;            // player's score
+    Direction dir;        //direction the snake is moving in
     vector<pair<int, int>> snakeBody; //stores the body parts of the snake as pairs of coordinates
-    int difficultySpeed; // speed of the game, adjusted based on difficulty
+    int difficultySpeed;  // speed of the game, adjusted based on difficulty
 
 public:
     SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { //initial value assigned
@@ -54,15 +54,15 @@ public:
 
     void setDifficulty(int level) {
         switch(level) {
-            case 1: difficultySpeed = 150; break; // Easy difficulty
-            case 2: difficultySpeed = 100; break; // Medium difficulty
-            case 3: difficultySpeed = 50; break; // Hard difficulty
+            case 1: difficultySpeed = 150; break;  // Easy difficulty
+            case 2: difficultySpeed = 100; break;  // Medium difficulty
+            case 3: difficultySpeed = 50; break;   // Hard difficulty
             default: difficultySpeed = 100; break; // Default to medium
         }
     }
 
     void generateFood() {
-        foodX = rand() % width;  //modulo because to take the random number  genrated into the range of grid
+        foodX = rand() % width;     //modulo because to take the random number  genrated into the range of grid
         foodY = rand() % height;
     }
 
