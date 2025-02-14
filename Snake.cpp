@@ -185,7 +185,7 @@ public:
             if (dir != STOP) logic();
             difference=score-previousscore;
             if(difference>5){ //at each inrease of 5 score speed of snake speed increase
-                difficultySpeed-=15;
+                difficultySpeed-=10;
                 previousscore=score;
             } 
             
