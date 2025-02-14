@@ -41,9 +41,10 @@ protected:
     Direction dir;        
     vector<pair<int, int>> snakeBody; 
     int difficultySpeed;  
+int maxscore;
 
 public:
-    SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { 
+    SnakeGame(int w, int h) :maxscore(0), width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { 
         x = width / 2; 
         y = height / 2;
         generateFood();
@@ -109,6 +110,7 @@ public:
         for (int i = 0; i < width + 2; ++i) cout << "🧱"; 
         
         cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  
+        cout<<"MAXSCORE:"<<maxscore<<" "<<endl;
     }
 
     void resetGame() { 
@@ -203,6 +205,7 @@ public:
             Sleep(difficultySpeed); 
         }
         showCursor(); 
+        if(score>=maxscore)maxscore=score;
         cout << "Game Over! Final Score: " << score << endl;
 
         char choice;
