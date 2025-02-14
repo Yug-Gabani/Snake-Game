@@ -48,6 +48,7 @@ public:
         x = width / 2; 
         y = height / 2;
         generateFood();
+        obstacle();
         snakeBody.push_back({x, y}); 
         snakeBody.push_back({x-1, y}); 
         snakeBody.push_back({x-2, y}); 
@@ -77,6 +78,12 @@ public:
         }
     } while (overlap); 
 }
+ void obstacle() { //to genrate obstacle
+        while(obsx!=foodX && obsy!=foodY){
+        obsx=rand()% width;
+        obsy=rand()% height;
+        }
+    }
 
     void draw() {
         setCursorPosition(0, 0);
@@ -92,6 +99,9 @@ public:
                     cout << "🐲"; 
                 } else if (i == foodY && j == foodX + 1) {
                     cout << "🐁"; 
+                } 
+                 else if(i==obsy && j==obsx+1){ //obstacle print
+                    cout<<"❌";
                 } else {
                     bool isBody = false;
                     for (const auto& bodyPart : snakeBody) {
