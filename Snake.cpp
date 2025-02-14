@@ -61,10 +61,21 @@ public:
         }
     }
 
-    void generateFood() {
-        foodX = rand() % width;     
+  void generateFood() { //ensure food not generate on snake body
+    bool overlap;
+    do {
+        overlap = false;
+        foodX = rand() % width;
         foodY = rand() % height;
-    }
+
+        for (const auto& bodyPart : snakeBody) {
+            if (bodyPart.first == foodX && bodyPart.second == foodY) {
+                overlap = true;
+                break;
+            }
+        }
+    } while (overlap); 
+}
 
     void draw() {
         setCursorPosition(0, 0);
