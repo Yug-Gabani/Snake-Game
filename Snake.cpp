@@ -1,106 +1,106 @@
-#include <iostream> //for input - output operations
-#include <vector>   //for using vector container
-#include <conio.h>  //it has _khbit() to detect new input and continue previous input untill new input, _getch() to take input without enter
-#include <cstdlib>  //rendom number generation 
+#include <iostream> 
+#include <vector>   
+#include <conio.h>  
+#include <cstdlib>  
 #include <ctime>    
 #include <windows.h> 
 using namespace std;
 
-enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; //enumaration for direction
+enum Direction { STOP = 0, LEFT, RIGHT, UP, DOWN }; 
 
-void setCursorPosition(int x, int y) {  // used to move cursor at given coordinate using coord it is part of <window.h>
+void setCursorPosition(int x, int y) {  
     COORD coord; 
     coord.X = x;                       
     coord.Y = y;                        
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);//move at that point
+    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
 
-void hideCursor() {                                        // function is made to hide cursor whike showing boundary and snake units, all the element are built
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
+void hideCursor() {                                        
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      //Get the current cursor info
-    cursorInfo.bVisible = false;                           // Make the cursor invisible
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      // Apply the new cursor settings
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      
+    cursorInfo.bVisible = false;                           
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      
 }
 
-void showCursor() {                                        // to show cursor when needed mostly at the end of game
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);// Get console handle
+void showCursor() {                                        
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
     CONSOLE_CURSOR_INFO cursorInfo;
-    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      //Get the current cursor info
-    cursorInfo.bVisible = true;                            // Make the cursor visible
-    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      // Apply the new cursor settings
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);      
+    cursorInfo.bVisible = true;                           
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);      
 }
 
-class SnakeGame {                                          // main logic
+class SnakeGame {                                          
 protected:
-    int width, height;    //all variable for gametrack,score,speed,snake body coordinate
-    bool gameOver;        //flag indicating if the game is over 
-    int x, y;             // snake head at initial stage
-    int foodX, foodY;     //position of the food 
-    int score;            // player's score
-    Direction dir;        //direction the snake is moving in
-    vector<pair<int, int>> snakeBody; //stores the body parts of the snake as pairs of coordinates
-    int difficultySpeed;  // speed of the game, adjusted based on difficulty
+    int width, height;    
+    bool gameOver;        
+    int x, y;             
+    int foodX, foodY;     
+    int score;            
+    Direction dir;        
+    vector<pair<int, int>> snakeBody; 
+    int difficultySpeed;  
 
 public:
-    SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { //initial value assigned
-        x = width / 2; //initial snake position(here snake position is middle)
+    SnakeGame(int w, int h) : width(w), height(h), gameOver(false), score(0), dir(STOP), difficultySpeed(100) { 
+        x = width / 2; 
         y = height / 2;
         generateFood();
-        snakeBody.push_back({x, y}); //inital 3 unit body 
+        snakeBody.push_back({x, y}); 
         snakeBody.push_back({x-1, y}); 
         snakeBody.push_back({x-2, y}); 
     }
 
     void setDifficulty(int level) {
         switch(level) {
-            case 1: difficultySpeed = 150; break;  // Easy difficulty
-            case 2: difficultySpeed = 100; break;  // Medium difficulty
-            case 3: difficultySpeed = 50; break;   // Hard difficulty
-            default: difficultySpeed = 100; break; // Default to medium
+            case 1: difficultySpeed = 150; break;  
+            case 2: difficultySpeed = 100; break;  
+            case 3: difficultySpeed = 50; break;   
+            default: difficultySpeed = 100; break; 
         }
     }
 
     void generateFood() {
-        foodX = rand() % width;     //modulo because to take the random number  genrated into the range of grid
+        foodX = rand() % width;     
         foodY = rand() % height;
     }
 
     void draw() {
         setCursorPosition(0, 0);
         
-        for (int i = 0; i < width + 2; ++i) cout << "🧱"; // +2 because boundary is for snake wall is just touching to show the boundary
+        for (int i = 0; i < width + 2; ++i) cout << "🧱"; 
         cout << endl;
 
         for (int i = 0; i < height; ++i) {
             for (int j = 0; j < width + 2; ++j) {
                 if (j == 0 || j == width + 1) {
-                    cout << "🧱"; //left and right borders
+                    cout << "🧱"; 
                 } else if (i == y && j == x + 1) {
-                    cout << "🐲"; //snake's head
+                    cout << "🐲"; 
                 } else if (i == foodY && j == foodX + 1) {
-                    cout << "🍎"; //food
+                    cout << "🍎"; 
                 } else {
                     bool isBody = false;
                     for (const auto& bodyPart : snakeBody) {
                         if (bodyPart.first == j - 1 && bodyPart.second == i) {
-                            cout << "🐍"; //snake's body
+                            cout << "🐍"; 
                             isBody = true;
                             break;
                         }
                     }
-                    if (!isBody) cout << "  "; // empty space
+                    if (!isBody) cout << "  "; 
                 }
             }
             cout << endl;
         }
 
-        for (int i = 0; i < width + 2; ++i) cout << "🧱"; // print the bottom of the border
+        for (int i = 0; i < width + 2; ++i) cout << "🧱"; 
         
-        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  //display score
+        cout << "\nScore: " << (score < 10 ? "0" : "") << score << endl;  
     }
 
-    void resetGame() { // default value assigned to each parameter
+    void resetGame() { 
         gameOver = false;
         score = 0;
         x = width / 2;
@@ -116,11 +116,11 @@ public:
 
 class SnackRun : public SnakeGame {
 public:
-    SnackRun(int w, int h) : SnakeGame(w, h) {} //Constructor for SnackRun
+    SnackRun(int w, int h) : SnakeGame(w, h) {} 
 
     void input() {
-        if (_kbhit()) {  // check if a key has been pressed
-            switch (_getch()) { //detect that input and changes direction according 
+        if (_kbhit()) {  
+            switch (_getch()) { 
             case 'a':
                 if (dir != RIGHT) dir = LEFT;
                 break;
@@ -139,27 +139,27 @@ public:
             }
         }
 
-        if (dir == STOP) dir = RIGHT; //defult direction is RIGHT when the game is strats
+        if (dir == STOP) dir = RIGHT; 
     }
 
     void logic() {
         pair<int, int> prevHead = {x, y};
         
-        switch (dir) { // Move the snake's head according input direction
+        switch (dir) { 
             case LEFT:  --x; break;
             case RIGHT: ++x; break;
-            case UP:    --y; break; //-- because as per computer coordinate system y-- than point moves up
-            case DOWN:  ++y; break; // vice versa
+            case UP:    --y; break; 
+            case DOWN:  ++y; break; 
             default:    break;
         }
 
-        if (x < 0 || x >= width || y < 0 || y >= height) { //game gets over when snake touches wall
+        if (x < 0 || x >= width || y < 0 || y >= height) { 
             gameOver = true;
             return;
         }
 
         for (const auto& bodyPart : snakeBody) {
-            if (bodyPart.first == x && bodyPart.second == y) {// check for body collision 
+            if (bodyPart.first == x && bodyPart.second == y) {
                 gameOver = true;
                 return;
             }
@@ -167,16 +167,16 @@ public:
 
         snakeBody.push_back({x, y});
     
-        if (x == foodX && y == foodY) { // if snake is eat food
-            score += 10;  // Increase score by 1
+        if (x == foodX && y == foodY) { 
+            score += 10;  
             generateFood();
         } else {
-            snakeBody.erase(snakeBody.begin()); // remove tail segment if food is not eaten  
+            snakeBody.erase(snakeBody.begin()); 
         }
     }
 
     void run() {
-        hideCursor();//hide the cursor for a cleaner display
+        hideCursor();
         int difference=0;
         int previousscore=0;
         while (!gameOver) {
@@ -184,21 +184,21 @@ public:
             input();
             if (dir != STOP) logic();
             difference=score-previousscore;
-            if(difference>5){ //at each inrease of 5 score speed of snake speed increase
+            if(difference>5){ 
                 difficultySpeed-=10;
                 previousscore=score;
             } 
             
-            Sleep(difficultySpeed); // to control the speed of the game
+            Sleep(difficultySpeed); 
         }
-        showCursor(); // show the cursor again when the game is over
+        showCursor(); 
         cout << "Game Over! Final Score: " << score << endl;
 
         char choice;
         cout << "Press 'R' to restart or any other key to exit: ";
         cin >> choice;
         if (choice == 'R' || choice == 'r') {
-            resetGame(); // reset the game and run again if 'R' or 'r' is pressed
+            resetGame(); 
             run(); 
         }
     }
@@ -206,18 +206,18 @@ public:
 
 int main() {
     SetConsoleOutputCP(CP_UTF8); 
-    srand(static_cast<unsigned>(time(0))); //seed the rendom number generator with the current time 
+    srand(static_cast<unsigned>(time(0))); 
     string s;
     cout<<"Enter the name of the player:"<<endl;
-    cin>>s; // player name input
+    cin>>s; 
 
     int difficulty;
     cout << "Choose difficulty level (1: Easy, 2: Medium, 3: Hard): ";
-    cin >> difficulty; // player chooses difficulty level
+    cin >> difficulty; 
 
-    SnackRun game(25, 25); // create a game object with a 25X25 grid
-    game.setDifficulty(difficulty); // set the game difficulty
-    game.run(); //start the game
+    SnackRun game(25, 25); 
+    game.setDifficulty(difficulty); 
+    game.run(); 
     cout<<"Thanks "<<s<<" for playing"<<endl; 
     return 0;
 }
