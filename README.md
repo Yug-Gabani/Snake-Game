@@ -1,5 +1,5 @@
 <h1>⚪️Snake Game</h1>
-<br><h2>🤝Made by Digital Dreamers</h2>Made
+<br><h2>🤝Made by Digital Dreamers</h2>
 
 <h2>🔴Overview</h2>
 
