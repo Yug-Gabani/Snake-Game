@@ -91,7 +91,7 @@ public:
                 } else if (i == y && j == x + 1) {
                     cout << "🐲"; 
                 } else if (i == foodY && j == foodX + 1) {
-                    cout << "🍎"; 
+                    cout << "🐁"; 
                 } else {
                     bool isBody = false;
                     for (const auto& bodyPart : snakeBody) {
