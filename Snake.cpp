@@ -181,7 +181,7 @@ public:
         snakeBody.push_back({x, y});
     
         if (x == foodX && y == foodY) { 
-            score += 10;  
+            score += 1;  
             generateFood();
         } else {
             snakeBody.erase(snakeBody.begin()); 
