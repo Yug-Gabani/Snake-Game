@@ -1,5 +1,5 @@
-<h1>⚪️SnackRun - Snake Game</h1>
-
+<h1>⚪️Snake Game</h1>
+<br><h2>🤝Made by Digital Dreamers</h2>Made
 
 <h2>🔴Overview</h2>
 
